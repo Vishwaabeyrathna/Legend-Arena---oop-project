@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* General Reset */
+
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #252525, #121212); /* Darker gradient */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333;
+    color: #eaeaea;
+    text-align: center;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    font-size: 2.5rem;
+    color: #f8ce46; /* Metacritic yellow */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Dashboard Buttons */
+.dashboard-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.dashboard-button {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(145deg, #2e2e2e, #1f1f1f); /* Dark metallic button */
+    border: 1px solid #444;
+    color: #eaeaea;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-button:hover {
+    background: linear-gradient(145deg, #1f1f1f, #2e2e2e); /* Reverse gradient on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+    transform: translateY(-5px);
+    color: #f8ce46; /* Highlight Metacritic yellow on hover */
+}
+
+/* Text Styling */
+.text-center {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #c3c3c3; /* Lighter gray for text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 2rem;
+    }
+    .dashboard-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Styling for Active Links */

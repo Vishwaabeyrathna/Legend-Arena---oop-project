@@ -1,0 +1,17 @@
+127.0.0.1 - - [28/Nov/2024:22:22:14 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [28/Nov/2024:22:24:52 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:24:53 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:25:07 +0530] "POST /gamingsite/register HTTP/1.1" 404 743
+127.0.0.1 - - [28/Nov/2024:22:25:42 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:25:42 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:26:01 +0530] "POST /gamingsite/register HTTP/1.1" 404 743
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:27:25 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:27:41 +0530] "POST /gamingsite/register HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:28:33 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:28:49 +0530] "POST /gamingsite/register HTTP/1.1" 200 137
+127.0.0.1 - - [28/Nov/2024:22:43:20 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:43:21 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:43:40 +0530] "POST /gamingsite/register HTTP/1.1" 200 137
+127.0.0.1 - - [28/Nov/2024:22:54:17 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:54:18 +0530] "GET /gamingsite/ HTTP/1.1" 200 2430
+0:0:0:0:0:0:0:1 - - [28/Nov/2024:22:54:33 +0530] "POST /gamingsite/register HTTP/1.1" 404 741

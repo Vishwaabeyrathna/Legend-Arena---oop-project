@@ -1,0 +1,9 @@
+127.0.0.1 - - [20/Dec/2024:13:47:59 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:01 +0530] "GET /gamingsite/Homepage.jsp HTTP/1.1" 200 4711
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:01 +0530] "GET /gamingsite/image2.jpg HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:01 +0530] "GET /gamingsite/image3.jpg HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:01 +0530] "GET /gamingsite/legendarena.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:01 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:07 +0530] "GET /gamingsite/games HTTP/1.1" 200 7848
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:13:48:10 +0530] "GET /gamingsite/gameDetails?title=Farcry+3 HTTP/1.1" 200 2142
+0:0:0:0:0:0:0:1 - - [20/Dec/2024:14:00:08 +0530] "GET /gamingsite/Registration.jsp HTTP/1.1" 200 6575

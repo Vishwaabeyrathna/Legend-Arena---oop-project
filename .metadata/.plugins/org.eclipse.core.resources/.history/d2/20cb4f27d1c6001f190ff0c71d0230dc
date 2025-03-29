@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+    // Check if the user is logged in
+    if (session.getAttribute("user_id") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+
+    // Get the game ID from the request parameters
+    String gameId = request.getParameter("game_id");
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review</title>
+</head>
+<body>
+    <h1>Leave a Review</h1>
+
+    <!-- Review Form -->
+    <form action="InsertReviewServlet" method="GET">
+        <!-- Hidden Fields for User and Game IDs -->
+        <input type="hidden" name="user_id" value="<%= session.getAttribute("user_id") %>">
+        <input type="hidden" name="game_id" value="<%= gameId %>">
+        
+        <!-- Rating Input -->
+        <label for="rating">Rating (out of 10):</label>
+        <input type="number" id="rating" name="rating" min="1" max="10" required>
+        <br>
+        
+        <!-- Comment Input -->
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Review">
+    </form>
+
+    <br>
+    <!-- Link to game details page -->
+    <a href="gameDetails.jsp?game_id=<%= gameId %>">Back to Game Details</a>
+</body>
+</html>

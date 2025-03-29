@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* Metacritic-inspired color palette */
+:root {
+    --primary-bg: #222222;
+    --secondary-bg: #2a2a2a;
+    --primary-text: #fefefe;
+    --secondary-text: #cccccc;
+    --accent-color: #ffcc00;
+    --hover-highlight: rgba(255, 204, 0, 0.2);
+    --error-color: #ff4444;
+    --action-bg: #1d9bf0;
+    --action-bg-hover: #176ba0;
+}
+
+/* Wrapper for the table */
+.table-wrapper {
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    color: var(--primary-text);
+}
+
+.table-wrapper h2 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Table styling */
+.table {
+    color: var(--primary-text);
+}
+
+.table th {
+    background-color: var(--secondary-bg);
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--hover-highlight);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 204, 0, 0.1);
+}
+
+/* Cover image */
+.cover-img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* Maintains aspect ratio */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Action buttons */
+.action-links a {
+    margin: 5px 0;
+    font-size: 0.85rem;
+    display: inline-block;
+    width: 80px; /* Ensures consistent size for buttons */
+    text-align: center;
+}
+
+.action-links .btn-warning {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border: none;
+}
+
+.action-links .btn-warning:hover {
+    background-color: #e6b800;
+}
+
+.action-links .btn-danger {
+    background-color: var(--error-color);
+    color: var(--primary-text);
+    border: none;
+}
+
+.action-links .btn-danger:hover {
+    background-color: #cc0000;
+}
+
+/* Trailer link */
+.btn-link {
+    color: var(--action-bg);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    color: var(--action-bg-hover);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-wrapper {
+        padding: 15px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.85rem;
+    }
+
+    .action-links a {
+        width: 100%; /* Full width buttons for small screens */
+    }
+
+    .cover-img {
+        width: 50px;
+    }
+}

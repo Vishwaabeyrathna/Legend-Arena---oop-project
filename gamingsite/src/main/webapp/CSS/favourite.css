@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* General Body Styling for Game Library Only */
+.fav-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+.fav-page-title {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* Game Cards */
+.fav-game-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.fav-game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Card Image */
+.fav-game-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Game Card Details */
+.fav-game-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fav-game-card p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Remove from Favorites Button */
+.fav-remove-btn {
+    background-color: #ff0000; /* A bright red for remove */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.fav-remove-btn:hover {
+    background-color: rgb(227, 75, 38);
+}
+
+/* View Details Button */
+.fav-view-details-btn {
+    background-color: #007bff; /* Metacritic blue */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.fav-view-details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Grid */
+.fav-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .fav-page-title {
+        font-size: 2rem;
+    }
+
+    .fav-game-card {
+        padding: 15px;
+    }
+
+    .fav-game-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .fav-game-card img {
+        height: 200px;
+    }
+}

@@ -1,0 +1,247 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.*" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend Arena</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #222; /* Metacritic dark background */
+            color: #fff; /* White text */
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #333; /* Dark gray navbar */
+            border-bottom: 2px solid #ffc107; /* Yellow accent */
+        }
+        .navbar-brand {
+            color: #ffc107; /* Yellow branding */
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-brand:hover {
+            color: #fff;
+        }
+        .nav-link {
+            color: #ddd; /* Light gray links */
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffc107; /* Yellow on hover */
+        }
+        .carousel-inner img {
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .reviews h2 {
+            color: #ffc107; /* Yellow section header */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #333;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+        .footer {
+            background-color: #333;
+            color: #ddd;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            right: 20px;
+            top: 60px;
+            border: 1px solid #444;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .profile-dropdown p {
+            margin: 0;
+        }
+        .logout-icon {
+            position: relative;
+            cursor: pointer;
+            color: #ffc107;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .logout-icon:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Legend Arena</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="games">Show Games</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                 <li class="nav-item"><a class="nav-link" href="favourite.jsp">favourites</a></li>
+                <li class="nav-item">
+                    <div class="logout-icon" onclick="toggleProfile()">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-dropdown">
+                       
+                        <a href="profile" class="nav-link">Profile</a>
+                        <a href="login.jsp" class="nav-link">Log In</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Slideshow -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://wallpapercg.com/download/black-myth-wukong-3840x2160-25790.jpeg" class="d-block w-100" alt="Game 1">
+            <div class="carousel-caption">
+                <h5>Explore the latest RPGs</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image2.jpg" class="d-block w-100" alt="Game 2">
+            <div class="carousel-caption">
+                <h5>Top-rated games of the year</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image3.jpg" class="d-block w-100" alt="Game 3">
+            <div class="carousel-caption">
+                <h5>New indie game releases</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <div class="container">
+        <h2>Top Reviews</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-3">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Game Title</h3>
+                        <p class="card-text">Rating: 9/10</p>
+                        <p>“An epic journey!”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-3">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Game Title</h3>
+                        <p class="card-text">Rating: 8.5/10</p>
+                        <p>“A fantastic adventure.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-3">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Game Title</h3>
+                        <p class="card-text">Rating: 7.5/10</p>
+                        <p>“Great but could improve.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="footer py-4">
+        <div class="container text-center">
+            <!-- Social Media Icons -->
+            <div class="mb-3">
+                <a href="https://facebook.com" target="_blank" class="me-3 text-decoration-none text-light">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="me-3 text-decoration-none text-light">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="me-3 text-decoration-none text-light">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="text-decoration-none text-light">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="mb-3">
+                <p class="mb-1">Contact Us: <strong>+1-800-LEGEND</strong></p>
+                <p>Email: <strong>support@legendarena.com</strong></p>
+            </div>
+
+            <!-- Powered By Section -->
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="me-2">Powered by:</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NVIDIA_logo.svg/2560px-NVIDIA_logo.svg.png" alt="NVIDIA Logo" height="30" class="me-2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Ubisoft_logo.svg" alt="Ubisoft Logo" height="30">
+            </div>
+
+            <!-- Footer Note -->
+            <p class="text-muted small">&copy; 2024 Legend Arena. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleProfile() {
+        const profileDropdown = document.querySelector('.profile-dropdown');
+        profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>

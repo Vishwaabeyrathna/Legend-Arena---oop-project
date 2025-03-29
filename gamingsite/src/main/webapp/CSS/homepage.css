@@ -1,0 +1,78 @@
+/* General Styles */
+
+
+h1, h2, h3, h5 {
+    color:  #ffcc00;
+    font-weight: bold;
+}
+
+
+
+/* Section - Reviews */
+.reviews {
+    background-color: #e9e9e9;
+    padding: 60px 20px;
+}
+
+.reviews h2 {
+    color: #444;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.review-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #222;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Metacritic-Inspired Colors */
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #333333;
+    --background-light: #f2f2f2;
+    --background-dark: #444444;
+    --highlight: #1a7db1;
+    --rating-positive: #66cc33;
+    --rating-average: #ffcc00;
+    --rating-negative: #cc0000;
+}
+
+.text-highlight {
+    color: var(--highlight);
+}
+
+
+
+

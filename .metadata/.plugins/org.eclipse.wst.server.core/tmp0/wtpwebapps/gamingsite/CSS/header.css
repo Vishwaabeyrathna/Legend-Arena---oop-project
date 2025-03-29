@@ -1,0 +1,85 @@
+/* Enhanced Header Navbar */
+.header-navbar {
+    background-color: #222; /* Deep charcoal */
+    padding: 15px 20px; /* Increased padding for height */
+    border-bottom: 2px solid #444;
+}
+
+.header-navbar .navbar-brand {
+    color: #ffc107 !important; /* Metacritic yellow */
+    font-weight: 700;
+    font-size: 1.8rem; /* Slightly larger title */
+    transition: color 0.3s ease;
+}
+
+.header-navbar .navbar-brand:hover {
+    color: #fff !important; /* White for hover */
+}
+
+.header-navbar .nav-link {
+    color: #ccc !important; /* Light gray */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem; /* Ensure consistent font size */
+}
+
+.header-navbar .nav-link:hover {
+    color: #ffc107 !important;
+    transform: scale(1.1);
+}
+
+/* Logout Icon */
+.logout-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #333; /* Dark background */
+    border-radius: 50%;
+    color: #ffc107; /* Metacritic yellow */
+    font-size: 1.5rem; /* Larger icon size */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout-icon:hover {
+    background-color: #ffc107;
+    color: #333; /* Invert colors on hover */
+    transform: scale(1.1); /* Subtle scaling on hover */
+}
+
+/* Profile Dropdown */
+.header-profile-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #222; /* Deep charcoal */
+    color: #fff;
+    right: 0;
+    top: 60px;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 1050;
+    min-width: 220px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-navbar {
+        padding: 10px 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .header-navbar .navbar-brand {
+        font-size: 1.5rem; /* Slightly smaller title for mobile */
+    }
+
+    .logout-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem; /* Adjusted icon size for mobile */
+    }
+}
